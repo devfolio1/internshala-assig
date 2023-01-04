@@ -9,8 +9,10 @@ import {
   OutlinePersonIcon,
   OutlineCogIcon,
   OutlineLogoutIcon,
+  SettingsIcon,
 } from '../icons'
 import { Avatar, Badge, Input, Dropdown, DropdownItem, WindmillContext } from '@windmill/react-ui'
+
 
 function Header() {
   const { mode, toggleMode } = useContext(WindmillContext)
@@ -29,10 +31,10 @@ function Header() {
 
   return (
     <header className="z-40 py-4 bg-white shadow-bottom dark:bg-gray-800">
-      <div className="container flex items-center justify-between h-full px-6 mx-auto text-purple-600 dark:text-purple-300">
+      <div className="container flex items-center justify-between h-full px-6 mx-auto text-blue-600 dark:text-blue-300">
         {/* <!-- Mobile hamburger --> */}
         <button
-          className="p-1 mr-5 -ml-1 rounded-md lg:hidden focus:outline-none focus:shadow-outline-purple"
+          className="p-1 mr-5 -ml-1 rounded-md lg:hidden focus:outline-none focus:shadow-outline-blue"
           onClick={toggleSidebar}
           aria-label="Menu"
         >
@@ -40,13 +42,13 @@ function Header() {
         </button>
         {/* <!-- Search input --> */}
         <div className="flex justify-center flex-1 lg:mr-32">
-          <div className="relative w-full max-w-xl mr-6 focus-within:text-purple-500">
+          <div className="relative w-full max-w-xl mr-6 focus-within:text-blue-500">
             <div className="absolute inset-y-0 flex items-center pl-2">
               <SearchIcon className="w-4 h-4" aria-hidden="true" />
             </div>
             <Input
               className="pl-8 text-gray-700"
-              placeholder="Search for projects"
+              placeholder="Type to search"
               aria-label="Search"
             />
           </div>
@@ -55,7 +57,7 @@ function Header() {
           {/* <!-- Theme toggler --> */}
           <li className="flex">
             <button
-              className="rounded-md focus:outline-none focus:shadow-outline-purple"
+              className="rounded-md focus:outline-none focus:shadow-outline-blue"
               onClick={toggleMode}
               aria-label="Toggle color mode"
             >
@@ -67,9 +69,10 @@ function Header() {
             </button>
           </li>
           {/* <!-- Notifications menu --> */}
+          <SettingsIcon className="w-5 h-5 " aria-hidden="true" />
           <li className="relative">
             <button
-              className="relative align-middle rounded-md focus:outline-none focus:shadow-outline-purple"
+              className="relative align-middle rounded-md focus:outline-none focus:shadow-outline-blue"
               onClick={handleNotificationsClick}
               aria-label="Notifications"
               aria-haspopup="true"
@@ -99,18 +102,24 @@ function Header() {
                 <span>Alerts</span>
               </DropdownItem>
             </Dropdown>
+           
           </li>
+          <div className='grid'>
+          <p className='text-gray-500'>Thomson Brown</p>
+          <p className='text-gray-500'>Developer</p>
+          </div>
           {/* <!-- Profile menu --> */}
           <li className="relative">
+          
             <button
-              className="rounded-full focus:shadow-outline-purple focus:outline-none"
+              className="rounded-full focus:shadow-outline-blue focus:outline-none"
               onClick={handleProfileClick}
               aria-label="Account"
               aria-haspopup="true"
             >
               <Avatar
                 className="align-middle"
-                src="https://images.unsplash.com/photo-1502378735452-bc7d86632805?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&s=aa3a807e1bbdfd4364d1f449eaa96d82"
+                src="https://avatars.githubusercontent.com/u/1566403?s=400&v=4"
                 alt=""
                 aria-hidden="true"
               />

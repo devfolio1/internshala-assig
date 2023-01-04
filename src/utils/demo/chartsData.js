@@ -42,17 +42,17 @@ export const lineOptions = {
   data: {
     labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
     datasets: [
-      {
-        label: 'Organic',
-        /**
-         * These colors come from Tailwind CSS palette
-         * https://tailwindcss.com/docs/customizing-colors/#default-color-palette
-         */
-        backgroundColor: '#0694a2',
-        borderColor: '#0694a2',
-        data: [43, 48, 40, 54, 67, 73, 70],
-        fill: false,
-      },
+      // {
+      //   label: 'Organic',
+      //   /**
+      //    * These colors come from Tailwind CSS palette
+      //    * https://tailwindcss.com/docs/customizing-colors/#default-color-palette
+      //    */
+      //   backgroundColor: '#0694a2',
+      //   borderColor: '#0694a2',
+      //   data: [43, 48, 40, 54, 67, 73, 70],
+      //   fill: false,
+      // },
       {
         label: 'Paid',
         fill: false,
@@ -102,16 +102,16 @@ export const barOptions = {
   data: {
     labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
     datasets: [
-      {
-        label: 'Shoes',
-        backgroundColor: '#0694a2',
-        // borderColor: window.chartColors.red,
-        borderWidth: 1,
-        data: [-3, 14, 52, 74, 33, 90, 70],
-      },
+      // {
+      //   label: 'Shoes',
+      //   backgroundColor: '#0694a2',
+      //   // borderColor: window.chartColors.red,
+      //   borderWidth: 1,
+      //   data: [-3, 14, 52, 74, 33, 90, 70],
+      // },
       {
         label: 'Bags',
-        backgroundColor: '#7e3af2',
+        backgroundColor: '#1c64f2',
         // borderColor: window.chartColors.blue,
         borderWidth: 1,
         data: [66, 33, 43, 12, 54, 62, 84],
